@@ -1,4 +1,4 @@
-// 1. Render dinámico de las obras con fetch
+
 const contenedor = document.getElementById("lista-obras");
 
 fetch("data/obras.json")
@@ -22,7 +22,7 @@ fetch("data/obras.json")
     contenedor.innerHTML = '<p class="text-danger">No se pudieron cargar las obras.</p>';
   });
 
-// 2. Validación del formulario con Bootstrap
+
 const forms = document.querySelectorAll(".needs-validation");
 
 forms.forEach((form) => {

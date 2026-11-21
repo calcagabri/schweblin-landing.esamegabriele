@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --color-fondo: #e4eae6;
+  --color-acento: #a8232b;
+  --color-acento-oscuro: #821a21;
+  --color-papel: #f6f8f7;
+  --fuente-titulo: 'Playfair Display', Georgia, serif;
+  --fuente-texto: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h5, .navbar-brand {
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+}
+
+.navbar-brand { font-size: 1.5rem; }
+
+.encabezado h1 { line-height: 1.1; }
+
+.etiqueta { font-size: 0.9rem; }
+
+/* Se sobrescribe el estilo por defecto de .btn-primary de Bootstrap */
+.btn-primary {
+  --bs-btn-bg: var(--color-acento);
+  --bs-btn-border-color: var(--color-acento);
+  --bs-btn-hover-bg: var(--color-acento-oscuro);
+  --bs-btn-hover-border-color: var(--color-acento-oscuro);
+  --bs-btn-active-bg: var(--color-acento-oscuro);
+  --bs-btn-active-border-color: var(--color-acento-oscuro);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover con transición suave */
+.btn-primary:hover {
+  background-color: var(--color-acento-oscuro);
+}
+
+.card-obra {
+  background-color: var(--color-papel);
+}
+
+.card-obra .card-title { font-size: 1.5rem; }
+
+.ilustracion { width: 100%; }

@@ -1,0 +1,30 @@
+[
+  {
+    "titulo": "Pájaros en la boca",
+    "anio": 2009,
+    "genero": "Cuentos",
+    "descripcion": "Relatos breves donde lo extraño irrumpe en la vida diaria y la realidad pierde estabilidad.",
+    "icono": "bi-book"
+  },
+  {
+    "titulo": "Distancia de rescate",
+    "anio": 2014,
+    "genero": "Novela",
+    "descripcion": "Una mujer internada y un niño reconstruyen, en un diálogo febril, lo que ocurrió en un pueblo rural.",
+    "icono": "bi-exclamation-triangle"
+  },
+  {
+    "titulo": "Siete casas vacías",
+    "anio": 2015,
+    "genero": "Cuentos",
+    "descripcion": "Casas y familias donde lo doméstico esconde algo perturbador.",
+    "icono": "bi-house"
+  },
+  {
+    "titulo": "Kentukis",
+    "anio": 2018,
+    "genero": "Novela",
+    "descripcion": "Peluches con cámara manejados por desconocidos: vínculos, intimidad y vigilancia.",
+    "icono": "bi-eye"
+  }
+]

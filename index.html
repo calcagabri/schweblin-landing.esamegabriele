@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samanta Schweblin | Literatura argentina contemporánea</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-danger" href="#inicio">Samanta Schweblin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#obras">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="#autora">La autora</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://es.wikipedia.org/wiki/Samanta_Schweblin" target="_blank">Wikipedia</a>
+          </li>
+          <li class="nav-item ms-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalContacto">
+              Escribinos
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="inicio" class="encabezado bg-black text-white py-5">
+    <div class="container py-4">
+      <p class="etiqueta text-danger fw-bold mb-2">Literatura argentina contemporánea</p>
+      <h1 class="display-3 fw-bold">Samanta Schweblin</h1>
+      <p class="fs-5 mt-3">
+        Cuentos y novelas en los que lo cotidiano se vuelve inquietante.
+        Un recorrido por cuatro de sus libros.
+      </p>
+      <a href="#obras" class="btn btn-primary fs-5 mt-3">Explorar obras</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN 1: obras (grid + fetch) -->
+    <section id="obras" class="py-5">
+      <div class="container">
+        <h2 class="display-6 fw-bold mb-2">Obras</h2>
+        <p class="fs-5 mb-4">Cuatro libros para entrar en su universo.</p>
+        <div id="lista-obras" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"></div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: la autora (imagen + flexbox) -->
+    <section id="autora" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-5">
+           <img src="img/dread-horror-the-uncanny-from-the-mundane-v0-a4to22tc65kh1.jpg" class="img-fluid ilustracion border border-2 border-danger"
+  alt="Fotografía en blanco y negro de un niño parado en un parque, con las manos tensas y la mirada fija">
+          </div>
+          <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+            <h2 class="display-6 fw-bold">Lo inquietante en lo cotidiano</h2>
+            <p class="fs-5 mt-3">
+              Nacida en Buenos Aires, Schweblin es una de las voces más leídas de la narrativa
+              argentina actual. Sus libros fueron traducidos a numerosos idiomas.
+            </p>
+            <div class="d-flex justify-content-between border-bottom border-danger py-2">
+              <span class="fw-bold">Nacimiento</span><span>Buenos Aires, 1978</span>
+            </div>
+            <div class="d-flex justify-content-between border-bottom border-danger py-2">
+              <span class="fw-bold">Géneros</span><span>Cuento y novela</span>
+            </div>
+            <div class="d-flex justify-content-between border-bottom border-danger py-2">
+              <span class="fw-bold">Libros en esta página</span><span>4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <span class="fw-bold">Samanta Schweblin</span>
+      <div>
+        <a class="link-danger me-3" href="https://es.wikipedia.org/wiki/Samanta_Schweblin" target="_blank">
+          <i class="bi bi-globe"></i> Wikipedia
+        </a>
+        <a class="link-danger" href="#inicio"><i class="bi bi-arrow-up"></i> Volver arriba</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CON FORMULARIO -->
+  <div class="modal fade" id="modalContacto" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Escribinos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <form id="formContacto" class="needs-validation" novalidate
+          action="https://api.web3forms.com/submit" method="POST">
+          <div class="modal-body">
+            <input type="hidden" name="access_key" value="c3078555-74dc-45fb-839f-8534d21901423">
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre"
+                placeholder="Tu nombre" minlength="2" required>
+              <div class="invalid-feedback">Ingresá tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email"
+                placeholder="nombre@email.com" required>
+              <div class="invalid-feedback">Ingresá un email válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="libro" class="form-label">Libro favorito</label>
+              <select class="form-select" id="libro" name="libro" required>
+                <option value="" selected disabled>Elegí un libro</option>
+                <option value="pajaros-en-la-boca">Pájaros en la boca</option>
+                <option value="distancia-de-rescate">Distancia de rescate</option>
+                <option value="siete-casas-vacias">Siete casas vacías</option>
+                <option value="kentukis">Kentukis</option>
+              </select>
+              <div class="invalid-feedback">Elegí un libro.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+                minlength="10" required></textarea>
+              <div class="invalid-feedback">Escribí un mensaje de al menos 10 caracteres.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
